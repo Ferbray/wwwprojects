@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="wwwroot\a112t4.jpg" />
+    <None Remove="wwwroot\B736H6.jpg" />
+    <None Remove="wwwroot\D735T5.jpg" />
+    <None Remove="wwwroot\E732R7.jpg" />
+    <None Remove="wwwroot\F573T5.jpg" />
+    <None Remove="wwwroot\G387Y6.jpg" />
+    <None Remove="wwwroot\H384H3.jpg" />
+    <None Remove="wwwroot\icon.ico" />
+    <None Remove="wwwroot\K437E6.jpg" />
+    <None Remove="wwwroot\logo.png" />
+    <None Remove="wwwroot\picture.png" />
+    <None Remove="wwwroot\R836H6.jpg" />
+    <None Remove="wwwroot\T793T4.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpressMvvm" Version="22.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\b736h6.jpg" />
+    <Resource Include="wwwroot\d735t5.jpg" />
+    <Resource Include="wwwroot\e732r7.jpg" />
+    <Resource Include="wwwroot\f573t5.jpg" />
+    <Resource Include="wwwroot\g387y6.jpg" />
+    <Resource Include="wwwroot\h384h3.jpg" />
+    <Resource Include="wwwroot\icon.ico" />
+    <Resource Include="wwwroot\k437e6.jpg" />
+    <Resource Include="wwwroot\logo.png" />
+    <Resource Include="wwwroot\picture.png" />
+    <Resource Include="wwwroot\r836h6.jpg" />
+    <Resource Include="wwwroot\t793t4.jpg" />
+    <Resource Include="wwwroot\a112t4.jpg" />
+  </ItemGroup>
+
+</Project>

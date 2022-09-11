@@ -1,0 +1,17 @@
+﻿<Window x:Class="wdskills.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wdskills"
+        xmlns:viewmodels="clr-namespace:wdskills.ViewModel"
+        mc:Ignorable="d"
+        DataContext="{Binding MainViewModel, Source={StaticResource ViewModelLocator}}"
+        Title="Столовые приборы" Height="450" Width="400"
+        MinHeight="450px"
+        MinWidth="450px"
+        Icon ="/wwwroot/logo.png">
+    <Grid>
+        <Frame Content="{Binding PageSource}" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>
