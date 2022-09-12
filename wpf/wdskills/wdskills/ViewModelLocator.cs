@@ -28,16 +28,19 @@ namespace wdskills
                 options.UseSqlServer(@"Data Source=DESKTOP-E44T45H\FERBRAY;Initial Catalog=Trade;Integrated Security=True;"));
 
             services.AddTransient<MainViewModel>();
-            services.AddTransient<AuthViewModel>();
             services.AddTransient<RegViewModel>();
             services.AddTransient<AppDbService>();
             services.AddTransient<HomePageViewModel>();
             services.AddTransient<ProductViewModel>();
 
+            services.AddScoped<AuthViewModel>();
+
             services.AddSingleton<PageService>();
+            services.AddSingleton<CaptchaService>();
             services.AddSingleton<TransferUserService>();
             services.AddSingleton<TransferProductService>();
             services.AddSingleton<TransferIsAddProductService>();
+            services.AddSingleton<ResizeMainWindowService>();
             services.AddSingleton<ValidationService>();
 
             _provider = services.BuildServiceProvider();

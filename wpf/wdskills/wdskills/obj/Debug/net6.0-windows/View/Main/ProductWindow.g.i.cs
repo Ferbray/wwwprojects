@@ -54,7 +54,7 @@ namespace wdskills.View.Main {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/wdskills;V1.0.0.0;component/view/main/productwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/wdskills;component/view/main/productwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\Main\ProductWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

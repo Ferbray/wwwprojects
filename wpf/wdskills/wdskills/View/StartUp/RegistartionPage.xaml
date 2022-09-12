@@ -5,8 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:wdskills.View.StartUp"
       mc:Ignorable="d" 
-      MaxHeight="650px" MinHeight="650px" MaxWidth="450px" MinWidth="450px"
+      d:Height="650" d:Width="450"
       DataContext="{Binding RegViewModel, Source={StaticResource ViewModelLocator}}"
+      MaxHeight="{Binding SizePage.MaxHeight}"
+      MaxWidth="{Binding SizePage.MaxWidth}"
+      MinHeight="{Binding SizePage.MinHeight}"
+      MinWidth="{Binding SizePage.MinWidth}"
       Title="RegistartionPage">
 
     <Grid>

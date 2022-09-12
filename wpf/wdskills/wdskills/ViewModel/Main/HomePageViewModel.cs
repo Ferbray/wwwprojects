@@ -17,6 +17,7 @@ namespace wdskills.ViewModel
         private readonly TransferUserService _userService;
         private readonly TransferProductService _productService;
         private readonly TransferIsAddProductService _isAddProductService;
+        private readonly ResizeMainWindowService _resizeMainWindowService;
         private readonly AppDbService _appDbService;
 
         private User? user;
@@ -95,6 +96,7 @@ namespace wdskills.ViewModel
                 OnPropertyChanged("SearchInput");
             }
         }
+
         public string? SelectedProvider
         {
             get => selectedProvider;
@@ -131,6 +133,7 @@ namespace wdskills.ViewModel
             TransferUserService userService,
             TransferProductService productService,
             TransferIsAddProductService isAddProductService,
+            ResizeMainWindowService resizeMainWindowService,
             ValidationService validationService,
             AppDbService appDbService)
         {
@@ -140,6 +143,7 @@ namespace wdskills.ViewModel
             _validationService = validationService;
             _appDbService = appDbService;
             _isAddProductService = isAddProductService;
+            _resizeMainWindowService = resizeMainWindowService;
 
             User = _userService.User;
             Providers = _appDbService.GetProviderList();
@@ -150,6 +154,7 @@ namespace wdskills.ViewModel
 
         public ICommand Logout => new DelegateCommand(() => {
             _userService.ChangeUser(new User());
+            _resizeMainWindowService.ChangeSizeMainWindow(new(450, 450, 450, 450));
             _pageService.ChangePage(new AuthorizationPage());
         });
 

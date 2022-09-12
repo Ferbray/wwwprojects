@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:wdskills.View.Main"
       mc:Ignorable="d" 
-      MinHeight="500" MinWidth="1000"
+      d:MinHeight="500" d:MinWidth="1000"
       DataContext="{Binding HomePageViewModel, Source={StaticResource ViewModelLocator}}"
       Title="HomePage">
 

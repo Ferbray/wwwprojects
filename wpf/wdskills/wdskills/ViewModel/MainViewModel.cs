@@ -13,10 +13,12 @@ namespace wdskills.ViewModel
         private readonly TransferUserService _userService;
         private readonly TransferProductService _productService;
         private readonly TransferIsAddProductService _isAddProductService;
+        private readonly ResizeMainWindowService _resizeMainWindow;
 
         private Page? pageSource;
         private User? user;
         private Product? product;
+        private SizeMainWindow? sizeMainWindow;
         private bool isAddProduct;
         public Page? PageSource
         {
@@ -44,6 +46,15 @@ namespace wdskills.ViewModel
                 OnPropertyChanged("Product");
             }
         }
+        public SizeMainWindow? SizeMainWindow
+        {
+            get => sizeMainWindow;
+            set
+            {
+                sizeMainWindow = value;
+                OnPropertyChanged("SizeMainWindow");
+            }
+        }
         public bool IsAddProduct
         {
             get => isAddProduct;
@@ -58,18 +69,22 @@ namespace wdskills.ViewModel
             PageService pageService,
             TransferUserService userService,
             TransferProductService productService, 
-            TransferIsAddProductService isAddProductService)
+            TransferIsAddProductService isAddProductService,
+            ResizeMainWindowService resizeMainWindow)
         {
             _pageService = pageService;
             _userService = userService;
             _productService = productService;
             _isAddProductService = isAddProductService;
+            _resizeMainWindow = resizeMainWindow;   
 
             _pageService.OnPageChanged += page => PageSource = page;
             _userService.OnUserChanged += user => User = user;
             _productService.OnProductChanged += product => Product = product;
             _isAddProductService.OnIsAddProductChanged += isAddProduct => IsAddProduct = isAddProduct;
+            _resizeMainWindow.OnResizeWindowChanged += size => SizeMainWindow = size;
 
+            _resizeMainWindow.ChangeSizeMainWindow(new SizeMainWindow(450, 450, 450, 450));
             _pageService.ChangePage(new AuthorizationPage());
         }
     }

@@ -50,7 +50,6 @@ D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\View\Main\
 D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\View\StartUp\AuthorizationPage.baml
 D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\View\StartUp\RegistartionPage.baml
 D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\wdskills.g.resources
-D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\wdskills.GeneratedMSBuildEditorConfig.editorconfig
 D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\wdskills.AssemblyInfoInputs.cache
 D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\wdskills.AssemblyInfo.cs
 D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\wdskills.csproj.CoreCompileInputs.cache
@@ -63,3 +62,4 @@ D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\bin\Debug\net6.0-windows\wdskills.p
 D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\ref\wdskills.dll
 D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\View\Main\ProductWindow.g.cs
 D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\View\Main\ProductWindow.baml
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills\obj\Debug\net6.0-windows\wdskills.GeneratedMSBuildEditorConfig.editorconfig

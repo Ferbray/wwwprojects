@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net.Cache;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
@@ -13,7 +15,16 @@ namespace wdskills.Core
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return (new BitmapImage(new Uri("/wwwroot/" + value.ToString()!, UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache });
+            BitmapImage _image = new BitmapImage();
+            string path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug\\net6.0-windows\\", $"\\wwwroot\\{value.ToString()}");
+            _image.BeginInit();
+            _image.CacheOption = BitmapCacheOption.None;
+            _image.UriCachePolicy = new RequestCachePolicy(RequestCacheLevel.BypassCache);
+            _image.CacheOption = BitmapCacheOption.OnLoad;
+            _image.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
+            _image.UriSource = new Uri(path);
+            _image.EndInit();
+            return _image;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

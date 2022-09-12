@@ -14,6 +14,7 @@ namespace wdskills
         public MainWindow()
         {
             InitializeComponent();
+            this.SizeToContent = SizeToContent.Width;
         }
     }
 }

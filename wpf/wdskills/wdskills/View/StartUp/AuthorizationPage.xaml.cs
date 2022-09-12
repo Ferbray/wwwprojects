@@ -25,14 +25,6 @@ namespace wdskills.View.StartUp
         public AuthorizationPage()
         {
             InitializeComponent();
-            this.Loaded += delegate
-            {
-                Window window = Window.GetWindow(this);
-                window.SetBinding(Window.MinHeightProperty, new Binding() { Source = this.MinHeight + 50 });
-                window.SetBinding(Window.MinWidthProperty, new Binding() { Source = this.MinWidth });
-                window.SetBinding(Window.MaxHeightProperty, new Binding() { Source = this.MaxHeight + 50 });
-                window.SetBinding(Window.MaxWidthProperty, new Binding() { Source = this.MaxWidth });
-            };
         }
     }
 }

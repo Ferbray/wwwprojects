@@ -16,8 +16,11 @@ namespace wdskills.ViewModel.StartUp
     {
         private readonly PageService _pageService;
         private readonly ValidationService _validationService;
+        private readonly ResizeMainWindowService _resizeMainWindowService;
         private readonly AppDbService _appDbService;
         private string? errorMessage;
+
+        private SizeMainWindow? oldSize;
 
         public User User { private get; set; } = new User();
         public string? ConfirmPassword { get; set; }
@@ -34,11 +37,15 @@ namespace wdskills.ViewModel.StartUp
         public RegViewModel(
             PageService pageService, 
             ValidationService validationService,
+            ResizeMainWindowService resizeMainWindowService,
             AppDbService appDbService)
         {
             _pageService = pageService;
             _validationService = validationService; 
             _appDbService = appDbService;
+            _resizeMainWindowService = resizeMainWindowService;
+            oldSize = _resizeMainWindowService.SizeWindow;
+            _resizeMainWindowService.ChangeSizeMainWindow(new(450, 750, 450, 750));
         }
 
         public ICommand RegisterAccount => new AsyncCommand(async () => {
@@ -59,6 +66,7 @@ namespace wdskills.ViewModel.StartUp
         });
 
         public ICommand RedirectToAuthorization => new DelegateCommand(() => {
+            _resizeMainWindowService.ChangeSizeMainWindow(oldSize);
             _pageService.ChangePage(new AuthorizationPage());
         });
     }

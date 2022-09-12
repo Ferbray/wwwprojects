@@ -7,9 +7,12 @@
         xmlns:viewmodels="clr-namespace:wdskills.ViewModel"
         mc:Ignorable="d"
         DataContext="{Binding MainViewModel, Source={StaticResource ViewModelLocator}}"
-        Title="Столовые приборы" Height="450" Width="400"
-        MinHeight="450px"
-        MinWidth="450px"
+        Title="Столовые приборы"
+        MaxHeight="{Binding SizeMainWindow.MaxHeight}"
+        MaxWidth="{Binding SizeMainWindow.MaxWidth}"
+        MinHeight="{Binding SizeMainWindow.MinHeight}"
+        MinWidth="{Binding SizeMainWindow.MinWidth}"
+        d:Height="450" d:Width="450"
         Icon ="/wwwroot/logo.png">
     <Grid>
         <Frame Content="{Binding PageSource}" NavigationUIVisibility="Hidden"></Frame>

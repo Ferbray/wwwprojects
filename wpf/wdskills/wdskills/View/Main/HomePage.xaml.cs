@@ -23,14 +23,6 @@ namespace wdskills.View.Main
         public HomePage()
         {
             InitializeComponent();
-            this.Loaded += delegate
-            {
-                Window window = Window.GetWindow(this);
-                window.SetBinding(Window.MinHeightProperty, new Binding() { Source = this.MinHeight + 50 });
-                window.SetBinding(Window.MinWidthProperty, new Binding() { Source = this.MinWidth });
-                window.SetBinding(Window.MaxHeightProperty, new Binding() { Source = 7680 });
-                window.SetBinding(Window.MaxWidthProperty, new Binding() { Source = 4320 });
-            };
         }
     }
 }

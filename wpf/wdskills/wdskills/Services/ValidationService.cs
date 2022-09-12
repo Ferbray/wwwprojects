@@ -75,5 +75,19 @@ namespace wdskills.Services
             if (string.IsNullOrEmpty(product.ProductImage)) return "Ошибка: неверное фото продукта"; 
             return string.Empty;
         }
+
+        public string IsValidCaptcha(
+            bool sendCaptcha, 
+            DateTime endBanes, 
+            string? inputCaptcha, 
+            string? keyCaptcha)
+        {
+            if(sendCaptcha == true)
+            {
+                if(endBanes > DateTime.Now) return "Ошибка: подождите 10 секунд";
+                if (inputCaptcha != keyCaptcha) return "Ошибка: каптчи не сходятся";
+            }
+            return string.Empty;
+        }
     }
 }

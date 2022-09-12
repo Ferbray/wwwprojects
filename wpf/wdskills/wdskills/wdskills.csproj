@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="wwwroot\a112t4.jpg" />
     <None Remove="wwwroot\B736H6.jpg" />
+    <None Remove="wwwroot\captcha.jpg" />
     <None Remove="wwwroot\D735T5.jpg" />
     <None Remove="wwwroot\E732R7.jpg" />
     <None Remove="wwwroot\F573T5.jpg" />
@@ -34,10 +35,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="wwwroot\b736h6.jpg" />
+    <Resource Include="wwwroot\captcha.jpg" />
     <Resource Include="wwwroot\d735t5.jpg" />
     <Resource Include="wwwroot\e732r7.jpg" />
     <Resource Include="wwwroot\f573t5.jpg" />
