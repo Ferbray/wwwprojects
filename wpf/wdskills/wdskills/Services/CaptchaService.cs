@@ -56,11 +56,16 @@ namespace wdskills.Services
             Color backRandColor = ((SolidBrush)colorsBackground[_random.Next(colorsBackground.Length)]).Color;
             g.Clear(backRandColor);
             string textCaptcha = new string(Enumerable.Repeat(chars, 6).Select(s => s[_random.Next(s.Length)]).ToArray());
-            g.DrawString(
-                textCaptcha,
-                new Font("Comic Sans MS", 36),
-                colorsChar[_random.Next(colorsChar.Length)],
-                new PointF(Xpos, Ypos));
+            foreach(char symbol in textCaptcha)
+            {
+                g.DrawString(
+                    symbol.ToString(),
+                    new Font("Comic Sans MS", 36),
+                    colorsChar[_random.Next(0, colorsChar.Length)],
+                    new PointF(Xpos, Ypos));
+                Xpos += 36;
+                Ypos = _random.Next(10, height / 3);
+            }
             
             g.DrawLine(
                 new Pen(Color.Black, 5),
