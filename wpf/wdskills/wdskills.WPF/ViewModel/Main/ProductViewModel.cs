@@ -1,7 +1,9 @@
 ﻿using DevExpress.Mvvm;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -29,6 +31,8 @@ namespace wdskills.WPF.ViewModel.Main
         private bool isAddProduct;
         private bool isAdminPanelProduct;
         private string? errorMessage;
+        private string? productImageName;
+        private string? productImagePath;
         private string? selectedCategory = "Наборы";
 
         public bool IsUserAdmin { get; private set; }
@@ -98,6 +102,24 @@ namespace wdskills.WPF.ViewModel.Main
                 OnPropertyChanged("ErrorMessage");
             }
         }
+        public string? ProductImageName
+        {
+            get => productImageName;
+            set
+            {
+                productImageName = value;
+                OnPropertyChanged("ProductImageName");
+            }
+        }
+        public string? ProductImagePath
+        {
+            get => productImagePath;
+            set
+            {
+                productImagePath = value;
+                OnPropertyChanged("ProductImagePath");
+            }
+        }
 
         public ProductViewModel(
             ClientApiService clientApiService,
@@ -113,7 +135,8 @@ namespace wdskills.WPF.ViewModel.Main
             _clientApiService = clientApiService;
 
             User = _userService.User;
-            Product = _productService.Product;
+            Product = _productService.Product ?? new();
+            ProductImageName = (string.IsNullOrEmpty(Product!.ProductImage)) ? "picture.png"  : Product.ProductImage;
             IsAddProduct = isAddProductService.IsAddProduct;
             IsAdminPanelProduct = !IsAddProduct;
             Task.Run(async () =>
@@ -121,7 +144,6 @@ namespace wdskills.WPF.ViewModel.Main
         }
 
         public ICommand AddProduct => new AsyncCommand(async () => {
-
             FillNoInputDataProduct();
             string answer = await _clientApiService.PostAsync(new PostEntityModel<Product>()
             {
@@ -161,9 +183,43 @@ namespace wdskills.WPF.ViewModel.Main
             else ErrorMessage = answer;
         });
 
+        public ICommand LoadImage => new AsyncCommand(async () => {
+            OpenFileDialog openFileDialog = new();
+            openFileDialog.Filter = "Image files (*.png;*.jpeg;*.jpg)|*.png;*.jpeg;*.jpg|All files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                ProductImagePath = openFileDialog.FileName;
+                ProductImageName = ProductImagePath.Split('\\')[^1];
+                FileStream? fileStream = null!;
+                try
+                {
+                    fileStream = new FileStream(ProductImagePath, FileMode.Open);
+                    byte[] buffer = new byte[fileStream.Length];
+                    await fileStream.ReadAsync(buffer, 0, buffer.Length);
+
+                    fileStream.Close();
+                    fileStream.Dispose();
+                    var filePath = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug\\net6.0-windows", "");
+                    fileStream = new FileStream($"{filePath}/wwwroot/{ProductImageName}", FileMode.OpenOrCreate);
+                    await fileStream.WriteAsync(buffer, 0, buffer.Length);
+                }
+                catch (Exception ex)
+                {
+                    var message = ex.ToString();
+
+                }
+                finally
+                {
+                    fileStream?.Close();
+                }
+            }
+        });
+
         private void FillNoInputDataProduct()
         {
             Product ??= new();
+            Product.ProductImage = ProductImageName;
             Product.ProductMaxDiscount = 0;
             Product.ProductDiscount = 0;
             Product.ProductManufacture = "Неизвестно";
