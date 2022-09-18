@@ -54,7 +54,7 @@ namespace wdskills.WPF.View.StartUp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/wdskills.WPF;component/view/startup/registartionpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/wdskills.WPF;V1.0.0.0;component/view/startup/registartionpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\StartUp\RegistartionPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -61,7 +61,7 @@ namespace wdskills.WPF {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/wdskills.WPF;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/wdskills.WPF;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

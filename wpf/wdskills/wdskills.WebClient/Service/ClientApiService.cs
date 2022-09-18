@@ -35,7 +35,7 @@ namespace wdskills.WebClient.Service
                     entities = new();
                 }
             }
-            else ErrorMessage = response.ReasonPhrase;
+            else ErrorMessage = await response.Content.ReadAsStringAsync();
 
             return entities;
         }
@@ -46,7 +46,7 @@ namespace wdskills.WebClient.Service
             HttpResponseMessage response = await CreateResponsePostAsync(postModel);
 
             if (response.IsSuccessStatusCode) ErrorMessage = string.Empty;
-            else ErrorMessage = response.ReasonPhrase;
+            else ErrorMessage = await response.Content.ReadAsStringAsync();
 
             return ErrorMessage ?? "Ошибка: неизвестная";
         }
@@ -56,7 +56,7 @@ namespace wdskills.WebClient.Service
             HttpResponseMessage response = await CreateResponseDeleteProductAsync(urlDelete);
 
             if (response.IsSuccessStatusCode) ErrorMessage = string.Empty;
-            else ErrorMessage = response.ReasonPhrase;
+            else ErrorMessage = await response.Content.ReadAsStringAsync();
 
             return ErrorMessage ?? "Ошибка: неизвестная";
         }

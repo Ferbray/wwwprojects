@@ -54,7 +54,7 @@ namespace wdskills.WPF.View.Main {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/wdskills.WPF;component/view/main/homepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/wdskills.WPF;V1.0.0.0;component/view/main/homepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\Main\HomePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
