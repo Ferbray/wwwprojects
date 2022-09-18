@@ -1,0 +1,14 @@
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\bin\Debug\net6.0-windows\wdskills.WebServer.deps.json
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\bin\Debug\net6.0-windows\wdskills.WebServer.runtimeconfig.json
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\bin\Debug\net6.0-windows\wdskills.WebServer.dll
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\bin\Debug\net6.0-windows\wdskills.WebServer.pdb
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\wdskills.WebServer.csproj.AssemblyReference.cache
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\wdskills.WebServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\wdskills.WebServer.AssemblyInfoInputs.cache
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\wdskills.WebServer.AssemblyInfo.cs
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\wdskills.WebServer.csproj.CoreCompileInputs.cache
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\wdskills.WebServer.dll
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\refint\wdskills.WebServer.dll
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\wdskills.WebServer.pdb
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\wdskills.WebServer.genruntimeconfig.cache
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebServer\obj\Debug\net6.0-windows\ref\wdskills.WebServer.dll

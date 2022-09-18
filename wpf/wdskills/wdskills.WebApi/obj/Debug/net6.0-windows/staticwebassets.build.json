@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "r05x7M91xOkNAblm+570wO0lzIFZmrzDndAFhl7nBz4=",
+  "Source": "wdskills.WebApi",
+  "BasePath": "_content/wdskills.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

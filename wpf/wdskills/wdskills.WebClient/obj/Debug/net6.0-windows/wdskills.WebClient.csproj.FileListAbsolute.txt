@@ -1,0 +1,16 @@
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\bin\Debug\net6.0-windows\wdskills.WebClient.dll.config
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\bin\Debug\net6.0-windows\wdskills.WebClient.deps.json
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\bin\Debug\net6.0-windows\wdskills.WebClient.dll
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\bin\Debug\net6.0-windows\wdskills.WebClient.pdb
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\bin\Debug\net6.0-windows\wdskills.WebServer.dll
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\bin\Debug\net6.0-windows\wdskills.WebServer.pdb
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\wdskills.WebClient.csproj.AssemblyReference.cache
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\wdskills.WebClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\wdskills.WebClient.AssemblyInfoInputs.cache
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\wdskills.WebClient.AssemblyInfo.cs
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\wdskills.WebClient.csproj.CoreCompileInputs.cache
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\wdskills.WebClient.csproj.CopyComplete
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\wdskills.WebClient.dll
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\refint\wdskills.WebClient.dll
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\wdskills.WebClient.pdb
+D:\MyFiles\wwwprojects\wpf\wdskills\wdskills.WebClient\obj\Debug\net6.0-windows\ref\wdskills.WebClient.dll

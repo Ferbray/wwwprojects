@@ -1,0 +1,40 @@
+﻿<Page x:Class="wdskills.WPF.View.StartUp.AuthorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wdskills.WPF.View.StartUp"
+      mc:Ignorable="d" 
+      DataContext="{Binding AuthViewModel, Source={StaticResource ViewModelLocator}}"
+      d:Height="450" d:Width="450"
+      Title="Авторизация">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Grid.Row="0" Text="Авторизация" FontSize="24" Style="{StaticResource TextBlockTittle}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="20px"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="{Binding ErrorMessage}"/>
+            <TextBlock Grid.Row="1" Text="Логин" Margin="50 0 0 0"/>
+            <TextBox Grid.Row="1" VerticalAlignment="Center" Margin="0 0 0 5" Text="{Binding Login}"/>
+            <TextBlock Grid.Row="2" Text="Пароль" Margin="50 0 0 0"/>
+            <TextBox Grid.Row="2" VerticalAlignment="Center" Margin="0 5 0 0" Text="{Binding Password}"/>
+            <Image Grid.Row="3" Width="300px" MaxHeight="100px" Source="{Binding ImageCaptcha, Converter={StaticResource imageSourceConverter}}" Visibility="{Binding SendCaptcha, Converter={StaticResource boolToVisibilityConverter}}"/>
+            <TextBox Grid.Row="4" VerticalAlignment="Center" Margin="0 20px 0 5" Text="{Binding InputCaptcha}" Visibility="{Binding SendCaptcha, Converter={StaticResource boolToVisibilityConverter}}" Height="auto"/>
+            <Button Grid.Row="5" VerticalAlignment="Bottom" Command="{Binding RedirectToRegister}" Content="У вас нет аккаунта?" Style="{StaticResource ButtonLink}"/>        
+        </Grid>
+        <Button Grid.Row="2" Command="{Binding JoinAccount}" Content="Войти"/>
+    </Grid>
+</Page>
